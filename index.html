@@ -46,7 +46,6 @@
             <span class="barra fraca"></span>
           </div>
       </div>
-
   <div class="mini-card deslocado">
     <div class="mini-icone"><i data-lucide="calendar-days"></i></div>
       <div class="mini-barras">
@@ -56,50 +55,81 @@
     </div>
     <span class="visual-rodape">Informação que aproxima ↗</span>
   </div>
-</main>
-<div class="container-principal">
-
-  <section class="card-grupos">
-    <h2><i data-lucide="users"></i> Grupos de estudos</h2>
-      <p>Encontre colegas para aprender em conjunto.</p>
-      <a href="grupos.html" class="btn-grupos">Explorar grupos</a>
   </section>
+  
+  <div class="layout-conteudo-principal">
+    <section class="secao-avisos" id="avisos">
 
-  <form class="formulario">
-    <p class="subtitulo-topo">SUA VOZ IMPORTA</p>
-      <h2>Ajude a melhorar o ComunIF</h2>
-    <p class="descricao">Conte como tornar a comunicação do campus mais útil para você.</p>
+        <p class="subtitulo-topo">FIQUE POR DENTRO</p>
+        <h2 class="titulo-principal">Avisos importantes</h2>
 
-    <div class="grupo-campo">
-        <label for="inNome">Seu nome</label>
-        <input type="text" id="inNome" required placeholder="Como podemos chamar você?">
-    </div>
+        <div class="filtro-container">
+          <button class="filtro-btn ativo">Todos</button>
+          <button class="filtro-btn">Editais</button>
+          <button class="filtro-btn">Eventos</button>
+          <button class="filtro-btn">Extensão</button>
+        </div>
 
-    <div class="grupo-campo">
-        <label for="inCurso">Curso</label>
-        <input type="text" id="inCurso" required placeholder="Seu curso no campus">
-    </div>
+        <div class="aviso-card">
+          <span class="selo2"><i data-lucide="info"></i> AVISOS GERAIS</span>
 
-    <div class="grupo-campo">
-        <label for="inOpcoes">Como você avalia essa plataforma?</label>
-        <!--Usei para teste <input type="number" min="0" step="5" id="inPlataforma" required placeholder="Selecione uma nota">-->
-        <select id="opcoes" name="opcoes" required>
-          <option value="" disabled selected>Selecione uma nota</option>
-          <option value="1">1 - Precisa melhorar</option>
-          <option value="2">2 - Regular</option>
-          <option value="3">3 - Boa</option>
-          <option value="4">4 - Muito boa</option>
-          <option value="5">5 - Excelente</option>
-        </select>
-    </div>
-    <div class="grupo-campo">
-        <label for="inSugestao">Sua sugestão(opcional)</label>
-        <textarea id="inSugestao" rows="4" placeholder="O que você gostaria de ver aqui?"></textarea>
-    </div>
+          <h3 class="titulo-aviso"> Venha visitar a 16ª Bragantec - Feira de Ciência e Tecnologia, entre 12 e 14/11 no IFSP-BRA</h3>
 
-    <button type="submit" class="botao-enviar">Enviar avaliação</button>
-  </form>
-</div>
+          <!--<div class="aviso-img-container">
+            <img src="img/visitacaoBragantec2026.png" alt="Imagem de divulgação da Bragantec">
+          </div>-->
+
+          <p class="descricao-aviso">Não perca a oportunidade de prestigiar a Bragantec 2026 e conhecer ideias que estão ajudando a construir novas perspectivas para a educação, a ciência e a sociedade!</p>
+
+          <a href="https://www.ifsp.edu.br/bragantec" target="_blank" class="btn-aviso">Saiba mais</a>
+
+        </div>
+    </section>
+  </div>
+
+  <div class="container-principal">
+    <section class="card-grupos">
+      <h2><i data-lucide="users"></i> Grupos de estudos</h2>
+        <p>Encontre colegas para aprender em conjunto.</p>
+        <a href="grupos.html" class="btn-grupos">Explorar grupos</a>
+    </section>
+
+    <form class="formulario">
+      <p class="subtitulo-topo">SUA VOZ IMPORTA</p>
+        <h2>Ajude a melhorar o ComunIF</h2>
+      <p class="descricao">Conte como tornar a comunicação do campus mais útil para você.</p>
+
+      <div class="grupo-campo">
+          <label for="inNome">Seu nome</label>
+          <input type="text" id="inNome" required placeholder="Como podemos chamar você?">
+      </div>
+
+      <div class="grupo-campo">
+          <label for="inCurso">Curso</label>
+          <input type="text" id="inCurso" required placeholder="Seu curso no campus">
+      </div>
+
+      <div class="grupo-campo">
+          <label for="inOpcoes">Como você avalia essa plataforma?</label>
+          <!--Usei para teste <input type="number" min="0" step="5" id="inPlataforma" required placeholder="Selecione uma nota">-->
+          <select id="inOpcoes" name="opcoes" required>
+            <option value="" disabled selected>Selecione uma nota</option>
+            <option value="1">1 - Precisa melhorar</option>
+            <option value="2">2 - Regular</option>
+            <option value="3">3 - Boa</option>
+            <option value="4">4 - Muito boa</option>
+            <option value="5">5 - Excelente</option>
+          </select>
+      </div>
+      <div class="grupo-campo">
+          <label for="inSugestao">Sua sugestão(opcional)</label>
+          <!--coloquei esse textarea para deixar como uma "caixa de texto" grande porque se colocasse o input type="text" ele seria muito pequeno-->
+          <textarea id="inSugestao" rows="4" placeholder="O que você gostaria de ver aqui?"></textarea>
+      </div>
+      <button type="submit" class="botao-enviar">Enviar avaliação</button>
+    </form>
+  </div>
+ </main>
 
 <footer>
   <div class="footer-bottom">
