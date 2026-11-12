@@ -223,6 +223,7 @@ body {
   background: #d6e5da;
 }
 
+/*rodape do card verde*/
 .visual-rodape {
   align-self: flex-end;
   color: var(--lima);
@@ -231,16 +232,176 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.container-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  width: 100%;
+  min-height: auto;
+  background-color: #f5f8f4;
+  padding: 30px 6%;
+}
+
+.btn-grupos{
+  display: inline-block;
+  background-color: var(--lima);
+  color: var(--verde-escuro);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+
+.btn-grupos:hover{
+  filter: brightness(0.95);
+}
+
+.card-grupos{
+  display: block;
+  width: 448px;
+  min-width: 448px;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #e0e8df;
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin: 0;
+}
+
+.card-grupos h2{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  color: var(--verde);
+  margin: 0 0 12px;
+}
+
+.card-grupos p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 0 0 18px;
+}
+
+.formulario{
+  background-color: #eaf3e5;
+  width: 100%;
+  max-width: 448px;
+  margin: 0;
+  padding: 24px 20px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: none;
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.subtitulo-topo{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2e7d32;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.formulario h2{
+  font-size: 24px;
+  color:#1b5e20;
+  margin-bottom: 8px;
+}
+
+.formulario > p.descricao{
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/*organizao das classes de grupos dos campos */
+
+.grupo-campo{
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.grupo-campo label{
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b5e20;
+  margin-bottom: 6px;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea{
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #c8dfc6;
+  border-radius: 12px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+/*esse aqui garante a altura e o redimensionamento controlado da caixa de texto*/
+.grupo-campo textarea{
+  min-height: 100px;
+  resize: vertical;
+}
+
+/*efeito para um foco verde*/
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus{
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46,125,50,0.15);
+}
+
+.grupo-campo input::placeholder,
+.grupo-campo textarea::placeholder{
+  color: #aaa;
+}
+
+.botao-enviar{
+  width: 100%;
+  background-color: #1b5e20;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 10px;
+}
+
+.botao-enviar:hover{
+  background-color: #2e7d32;
+}
+
+.botao-enviar:active{
+  transform: scale(0.98);
+}
 
 /*rodape da página*/
 .footer-bottom {
   border-top: 1px solid #333333;
   padding: 20px;
   font-size: 0.75rem;
-  color: #000000;
+  color: #d6e5da;
   display:flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #00401f;
 
 }
