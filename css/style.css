@@ -55,7 +55,7 @@ body {
   color: #555;
 }
 
-/*Menu de navegação*/
+/*menu de navegação*/
 .menu {
   display: flex;
   gap: 32px;
@@ -404,4 +404,40 @@ body {
   flex-direction: column;
   background-color: #00401f;
 
+}
+
+@media (max-width: 768px){
+.hero{
+  grid-template-columns: 1fr;
+  padding: 32px 5%;
+  gap: 32px;
+}
+.hero h1{
+  font-size: 2.5rem;
+}
+.hero-visual{
+  padding: 24px 20px;
+}
+}
+
+@media (max-width: 768px){
+.container-principal{
+    padding: 20px 5%;
+    align-items: center;
+  }
+.card-grupos,
+.formulario{
+    width: 100% !important;
+    min-width: unset !important;
+  }
+.topo{
+    padding: 12px 5%;
+    flex-direction: column;
+    gap: 12px;
+  }
+.menu{
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
 }
