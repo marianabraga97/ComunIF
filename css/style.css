@@ -439,10 +439,16 @@ body {
   box-sizing: border-box;
   background-color: #ffffff;
   border: 1px solid #e0e8df;
-  border-left: 4px solid var(--verde); /*borda verde do lado esquerdo do aviso importante*/
+  border-left: 6px solid var(--verde-escuro); /*borda verde do lado esquerdo do aviso importante*/
   border-radius: 16px;
   padding: 24px 20px;
   margin: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aviso-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 }
 
 /*aqui é o layout dos botões antes do aviso importante*/
