@@ -56,78 +56,95 @@
     <span class="visual-rodape">Informação que aproxima ↗</span>
   </div>
   </section>
-  
-  <div class="layout-conteudo-principal">
-    <section class="secao-avisos" id="avisos">
+  <div class="conteudo-duas-colunas">
+    <div class="layout-conteudo-principal">
+      <section class="secao-avisos" id="avisos">
 
-        <p class="subtitulo-topo">FIQUE POR DENTRO</p>
-        <h2 class="titulo-principal">Avisos importantes</h2>
+          <p class="subtitulo-topo">FIQUE POR DENTRO</p>
+          <h2 class="titulo-principal">Avisos importantes</h2>
 
-        <div class="filtro-container">
-          <button class="filtro-btn ativo">Todos</button>
-          <button class="filtro-btn">Editais</button>
-          <button class="filtro-btn">Eventos</button>
-          <button class="filtro-btn">Extensão</button>
+          <div class="filtro-container">
+            <button class="filtro-btn ativo">Todos</button>
+            <button class="filtro-btn">Avisos Gerais</button>
+            <button class="filtro-btn">Oportunidades</button>
+            <button class="filtro-btn">Eventos</button>
+          </div>
+
+          <div class="aviso-card">
+            <span class="selo2"><i data-lucide="info"></i> AVISOS GERAIS</span>
+            <h3 class="titulo-aviso">INEP e ENADE - Questionário dos Ingressantes</h3>
+            <p class="descricao-aviso">Ingressantes de ADS: não se esqueçam do Questionário do Estudante!
+              O INEP solicita que os alunos ingressantes de 2026 preencham um questionário para conhecer melhor o perfil dos estudantes do ensino superior. O preenchimento é obrigatório e deve ser realizado até <strong>18/12/2026</strong>. É necessário ter uma conta gov.br para acessar.</p>
+            <br>
+            <a href="https://www.gov.br/pt-br" target="_blank" class="btn-aviso">Saiba mais</a>
+          </div>
+          <br>
+          <div class="aviso-card">
+            <span class="selo2"><i data-lucide="info"></i> EVENTOS</span>
+
+            <h3 class="titulo-aviso"> Venha visitar a EXPOADS - Feira de extensão, entre 16 e 19/11 no IFSP-BRA</h3>
+
+            <p class="descricao-aviso">Não perca a oportunidade de prestigiar a EXPOADS e conhecer ideias que estão ajudando a construir novas perspectivas para a comunidade.</p>
+
+            <!-- <a href="#" target="_blank" class="btn-aviso">Saiba mais</a> -->
+
+          </div>
+          <br>
+          <div class="aviso-card">
+            <span class="selo2"><i data-lucide="info"></i>OPORTUNIDADE</span>
+
+            <h3 class="titulo-aviso">Vaga de Estágio em Desenvolvimento Web (Presencial)</h3>
+
+            <p class="descricao-aviso">Processo seletivo aberto para estudantes do curso Analise e Desenvolvimento de Sistemas a partir do 3º semestre. Bolsa auxílio + vale-transporte. Inscrições abertas até sexta-feira 27/11.</p>
+
+            <a href="#" target="_blank" class="btn-aviso">Saiba mais</a>
+
+          </div>
+      </section>
+    </div>
+
+    <div class="container-principal">
+      <section class="card-grupos">
+        <h2><i data-lucide="users"></i> Grupos de estudos</h2>
+          <p>Encontre colegas para aprender em conjunto.</p>
+          <a href="grupos.html" class="btn-grupos">Explorar grupos</a>
+      </section>
+
+      <form class="formulario">
+        <p class="subtitulo-topo">SUA VOZ IMPORTA</p>
+          <h2>Ajude a melhorar o ComunIF</h2>
+        <p class="descricao">Conte como tornar a comunicação do campus mais útil para você.</p>
+
+        <div class="grupo-campo">
+            <label for="inNome">Seu nome</label>
+            <input type="text" id="inNome" required placeholder="Como podemos chamar você?">
         </div>
 
-        <div class="aviso-card">
-          <span class="selo2"><i data-lucide="info"></i> AVISOS GERAIS</span>
-
-          <h3 class="titulo-aviso"> Venha visitar a 16ª Bragantec - Feira de Ciência e Tecnologia, entre 12 e 14/11 no IFSP-BRA</h3>
-
-          <!--<div class="aviso-img-container">
-            <img src="img/visitacaoBragantec2026.png" alt="Imagem de divulgação da Bragantec">
-          </div>-->
-
-          <p class="descricao-aviso">Não perca a oportunidade de prestigiar a Bragantec 2026 e conhecer ideias que estão ajudando a construir novas perspectivas para a educação, a ciência e a sociedade!</p>
-
-          <a href="https://www.ifsp.edu.br/bragantec" target="_blank" class="btn-aviso">Saiba mais</a>
-
+        <div class="grupo-campo">
+            <label for="inCurso">Curso</label>
+            <input type="text" id="inCurso" required placeholder="Seu curso no campus">
         </div>
-    </section>
-  </div>
 
-  <div class="container-principal">
-    <section class="card-grupos">
-      <h2><i data-lucide="users"></i> Grupos de estudos</h2>
-        <p>Encontre colegas para aprender em conjunto.</p>
-        <a href="grupos.html" class="btn-grupos">Explorar grupos</a>
-    </section>
-
-    <form class="formulario">
-      <p class="subtitulo-topo">SUA VOZ IMPORTA</p>
-        <h2>Ajude a melhorar o ComunIF</h2>
-      <p class="descricao">Conte como tornar a comunicação do campus mais útil para você.</p>
-
-      <div class="grupo-campo">
-          <label for="inNome">Seu nome</label>
-          <input type="text" id="inNome" required placeholder="Como podemos chamar você?">
-      </div>
-
-      <div class="grupo-campo">
-          <label for="inCurso">Curso</label>
-          <input type="text" id="inCurso" required placeholder="Seu curso no campus">
-      </div>
-
-      <div class="grupo-campo">
-          <label for="inOpcoes">Como você avalia essa plataforma?</label>
-          <!--Usei para teste <input type="number" min="0" step="5" id="inPlataforma" required placeholder="Selecione uma nota">-->
-          <select id="inOpcoes" name="opcoes" required>
-            <option value="" disabled selected>Selecione uma nota</option>
-            <option value="1">1 - Precisa melhorar</option>
-            <option value="2">2 - Regular</option>
-            <option value="3">3 - Boa</option>
-            <option value="4">4 - Muito boa</option>
-            <option value="5">5 - Excelente</option>
-          </select>
-      </div>
-      <div class="grupo-campo">
-          <label for="inSugestao">Sua sugestão(opcional)</label>
-          <!--coloquei esse textarea para deixar como uma "caixa de texto" grande porque se colocasse o input type="text" ele seria muito pequeno-->
-          <textarea id="inSugestao" rows="4" placeholder="O que você gostaria de ver aqui?"></textarea>
-      </div>
-      <button type="submit" class="botao-enviar">Enviar avaliação</button>
-    </form>
+        <div class="grupo-campo">
+            <label for="inOpcoes">Como você avalia essa plataforma?</label>
+            <!--Usei para teste <input type="number" min="0" step="5" id="inPlataforma" required placeholder="Selecione uma nota">-->
+            <select id="inOpcoes" name="opcoes" required>
+              <option value="" disabled selected>Selecione uma nota</option>
+              <option value="1">1 - Precisa melhorar</option>
+              <option value="2">2 - Regular</option>
+              <option value="3">3 - Boa</option>
+              <option value="4">4 - Muito boa</option>
+              <option value="5">5 - Excelente</option>
+            </select>
+        </div>
+        <div class="grupo-campo">
+            <label for="inSugestao">Sua sugestão(opcional)</label>
+            <!--coloquei esse textarea para deixar como uma "caixa de texto" grande porque se colocasse o input type="text" ele seria muito pequeno-->
+            <textarea id="inSugestao" rows="4" placeholder="O que você gostaria de ver aqui?"></textarea>
+        </div>
+        <button type="submit" class="botao-enviar">Enviar avaliação</button>
+      </form>
+    </div>
   </div>
  </main>
 
