@@ -250,6 +250,14 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+.conteudo-duas-colunas {
+  /*max-width: 1200px;*/
+  /*width: 100%;*/
+  /*margin: 0 auto;*/
+  display: flex;
+  gap: 32px;
+}
 .container-principal {
   display: flex;
   flex-direction: column;
@@ -426,6 +434,15 @@ body {
 .aviso-card{
   width: 100%;
   max-width: 600px;
+  display: block;
+  min-width: 448px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #e0e8df;
+  border-left: 4px solid var(--verde); /*borda verde do lado esquerdo do aviso importante*/
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin: 0;
 }
 
 /*aqui é o layout dos botões antes do aviso importante*/
@@ -449,9 +466,9 @@ body {
   background-color: #ffffff;
   color: var(--verde-escuro);
   border: 1px solid #c8dfc6;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
+  padding: 6px 14px;
+  font-weight: 500;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 999px;
   transition: all 0.2s ease;
@@ -533,7 +550,7 @@ body {
 
 }
 
-/*responsividade*/
+/*responsividade para celulares e tablets*/
 @media (max-width: 768px){
 .hero{
   grid-template-columns: 1fr;
