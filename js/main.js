@@ -28,3 +28,27 @@ const sugestao = document.querySelector("#inSugestao").value;
     frm.reset();
     frm.inNome.focus();
 })
+
+
+//seleciona todos os botões de filtro e todos os cartões de aviso
+const botoesFiltro = document.querySelectorAll(".filtro-btn");
+const cardAvisos = document.querySelectorAll(".aviso-card");
+
+botoesFiltro.forEach((botao) => {
+    botao.addEventListener("click", () => {
+//Remove a classe 'ativo' de todos os botões e coloca apenas no clicado
+botoesFiltro.forEach(b => b.classList.remove("ativo"));
+botao.classList.add("ativo");
+
+const categoriaFiltro = botao.textContent.trim().toLocaleLowerCase();
+//percorre cada cartão para decidir se mostra ou esconde
+cardAvisos.forEach((card) => {
+    const textoSelo = card.querySelector('.selo2').textContent.trim().toLocaleLowerCase(); // //trim remove os espaços do inicio e do fim da palavra
+    if (categoriaFiltro === "todos" || textoSelo === categoriaFiltro) {
+        card.style.display = "block"; //esse mostra o cartao
+    } else {
+        card.style.display = "none"; //esse esconde o cartao
+            }
+        });
+    });
+});
