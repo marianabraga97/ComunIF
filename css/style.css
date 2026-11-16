@@ -143,7 +143,7 @@ body {
 .hero h1 {
   font-size: 3rem;
   line-height: 1.1;
-  color: var(--verde-escuro) !important;
+  color: var(--verde-escuro);
   margin: 20px 0;
 }
 
@@ -286,9 +286,9 @@ body {
 
 .card-grupos{
   display: block;
-  width: 448px;
-  min-width: 448px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 448px;
+  min-width: 0;
   box-sizing: border-box;
   background-color: #ffffff;
   border: 1px solid #e0e8df;
@@ -309,7 +309,7 @@ body {
 .card-grupos p {
   font-size: 15px;
   color: #555;
-  margin-bottom: 0 0 18px;
+  margin: 0 0 18px;
 }
 
 .formulario{
@@ -435,6 +435,7 @@ body {
 .aviso-card{
   width: 100%;
   max-width: 600px;
+  min-width: 0;
   display: block;
   min-width: 448px;
   box-sizing: border-box;
@@ -449,7 +450,7 @@ body {
 
 .aviso-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 /*aqui é o layout dos botões antes do aviso importante*/
@@ -495,11 +496,11 @@ body {
   margin: 0;
 }
 
-.descricao-aviso{
-  font-size: 15px;
+.descricao-aviso {
+  font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
-  margin: 0;
+  margin: 0 0 20px;
 }
 
 /*para o botão de ver mais*/
@@ -542,8 +543,8 @@ body {
 }
 /*parte da pagina grupos*/
 .hero1 {
-  background-color: #113f2b !important;
-  color: #ffffff !important;
+  background-color: #113f2b;
+  color: #ffffff;
   padding: 35px 40px;
   display: flex;
   justify-content: space-between;
@@ -561,7 +562,7 @@ body {
 .hero1-texto h1 {
   font-size: 2.5rem;
   margin-bottom: 12px;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .hero1-texto p {
@@ -588,9 +589,9 @@ body {
 
 /*caixa visual à direita com a imagem */
 .hero1-visual {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
   width: 380px;
   display: flex;
   justify-content: flex-end;
@@ -645,9 +646,11 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 30px;
+  width: 100%;
   max-width: 1200px;
-  margin-top: 20px;
+  margin: 20px auto 40px;
   padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .secao-grupos-ativos{
@@ -668,11 +671,12 @@ body {
   padding: 24px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
   margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.grupo-card:hover{
-    transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+.grupo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .grupo-topo-card {
@@ -719,7 +723,7 @@ body {
   border-radius: 20px;
 }
 
-.titulo-aviso2 {
+.titulo-aviso1 {
   font-size: 1.25rem;
   color: #113f2b;
   font-weight: 700;
@@ -739,13 +743,6 @@ body {
   width: 16px;
   height: 16px;
   color: #666;
-}
-
-.descricao-aviso {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 20px;
 }
 
 .btn-participar {
@@ -777,6 +774,27 @@ body {
 }
 .hero-visual{
   padding: 24px 20px;
+}
+.filtro-container {
+  flex-wrap: wrap;
+}
+
+.filtro-busca-grid {
+  grid-template-columns: 1fr;
+}
+
+.conteudo-duas-colunas1 {
+  flex-direction: column;
+  padding: 0 5%;
+  gap: 20px;
+}
+
+.coluna-lateral {
+  width: 100%;
+}
+
+.grupo-topo-card {
+  flex-wrap: wrap;
 }
 }
 
