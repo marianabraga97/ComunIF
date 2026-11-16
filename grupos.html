@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComunIF · Campus Bragança Paulista</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/ifsp.favicon.png">
+</head>
+<body>
+
+<header class="topo">
+  <a class="marca" href="index.html">
+    <img src="img/ifsp.favicon.png" alt="Logo do IFSP" class="logo">
+    <div class="marca-texto">
+      <strong>ComunIF</strong>
+      <span>Campus Bragança Paulista</span>
+    </div>
+  </a>
+
+  <nav class="menu">
+    <a href="index.html"><i data-lucide="house"></i> Início</a>
+    <a href="#avisos"><i data-lucide="megaphone"></i> Avisos</a>
+    <a href="grupos.html" class="ativo"><i data-lucide="users"></i> Grupos de Estudo</a>
+    <a href="calendario.html"><i data-lucide="calendar-days"></i> Calendário</a>
+
+    <div class="topo-direita">
+      <a href="login.html" class="btn-usuario" aria-label="Entrar"><i data-lucide="circle-user"></i>Login</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero1">
+    <div class="hero1-texto">
+      <a href="index.html" class="voltar"><i data-lucide="arrow-left"></i> Voltar ao inicio</a>
+      <span class="selo-topo">Aprender é conectar</span>
+      <h1>Grupos de Estudo</h1>
+      <p>Encontre grupos de estudo para aprimorar seus conhecimentos e se conectar com outros estudantes.</p>
+    </div>
+    
+    <div class="hero-visual1">
+      <img src="img/estudo.png" alt="Grupo de estudo" class="imagem-hero">
+    </div>
+  </section>
+  
+  <div class="conteudo-duas-colunas1">
+      <section class="secao-grupos-ativos">
+        <span class="subtitulo-topo">ENCONTRE SUA TURMA</span>
+        <h2 class="titulo-principal">Grupos Ativos</h2>
+        
+        <div class="filtro-busca-grid">
+          <div class="grupo-campo">
+            <label for="buscarGrupos">Buscar grupos...</label>
+            <input type="text" id="buscarGrupos" placeholder="Digite o nome do grupo">
+          </div>
+          <div class="grupo-campo">
+            <label for="inOpcoes">Curso ou área</label>
+            <select id="inOpcoes" name="opcoes" required>
+              <option value="" disabled selected>Todos os cursos</option>
+              <option value="1">Análise e Desenvolvimento de Sistemas</option>
+              <option value="2">Engenharia e Controle de Automação</option>
+              <option value="3">Matemática</option>
+            </select>
+          </div>
+        </div>
+        <div class="grupo-card">
+          <div class="grupo-topo-card">
+            <div class="grupo-icone">
+              <i data-lucide="code"></i>
+            </div>
+
+            <div class="grupo-info-principal">
+              <span class="grupo-selo">Analise e Desenvolvimento de Sistemas</span>
+              <h3 class="titulo-aviso1">Desenvolvimento Web</h3>
+            </div>
+
+            <div class="grupo-membros">
+              <i data-lucide="users"></i> 18
+            </div>
+          </div>
+          <p class="descricao-aviso">Projetos, HTML, CSS e JavaScript na prática com colegas do campus.</p>
+          <a href="#" class="btn-participar">Participar</a>
+        </div>
+    </section>
+
+      <aside class="coluna-lateral">
+        <div class="card-meus-grupos">
+          <h2><i data-lucide="bookmark"></i> Meus Grupos</h2>
+          <p class="sem-grupos">Ops! Ainda não entrou em nenhum grupo.</p>
+        </div>
+      </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-bottom">
+    <p>&copy; IFSP Bragança Paulista 2026</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="js/grupo.js"></script>
+
+</body>
+</html>
