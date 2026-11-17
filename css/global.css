@@ -1,0 +1,120 @@
+/*global serve para colocar elementos que serão repetidos em cada pagina, por exemplo, cabeçalho, menu, rodapé etc*/
+
+/*esse root serve para alterar as cores de cada estilo da pagina sem precisa ir diretamente em cada elemento alterar...*/
+:root {
+  --verde-escuro: #00401f;
+  --verde: #005a2b;
+  --lima: #c9ea52;
+  --fundo: #f5f8f4;
+}
+
+/*base*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  background: var(--fundo);
+  color: #333;
+}
+
+/*cabeçalho*/
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 6%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/*logo e nome do site */
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+}
+
+.marca-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.marca strong {
+  font-size: 1.5rem;
+  color: var(--verde);
+}
+
+.marca span {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/*menu de navegação*/
+.menu {
+  display: flex;
+  gap: 32px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #444;
+  padding-bottom: 6px;
+  border-bottom: 3px solid transparent;
+}
+
+.menu a svg {
+  width: 18px;
+  height: 18px;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  color: var(--verde);
+  border-bottom-color: var(--lima);
+}
+
+.topo-direita {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.btn-usuario {
+  display: flex;
+  color: var(--verde);
+}
+
+.btn-usuario svg {
+  width: 28px;
+  height: 28px;
+}
+
+.btn-usuario:hover {
+  color: var(--verde-escuro);
+}
+
+/*rodape das páginas*/
+.footer-bottom {
+  border-top: 1px solid #333333;
+  padding: 20px;
+  font-size: 0.75rem;
+  color: #d6e5da;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00401f;
+
+}

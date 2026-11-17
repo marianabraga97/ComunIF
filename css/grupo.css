@@ -1,0 +1,676 @@
+/*parte da pagina grupos de estudo*/
+.hero1 {
+  background-color: #113f2b;
+  color: #ffffff;
+  padding: 35px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero1-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 600px;
+}
+
+.hero1-texto h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.hero1-texto p {
+  font-size: 1rem;
+  color: #d0dcd0;
+  line-height: 1.5;
+}
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--lima);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.voltar:hover {
+  opacity: 0.8;
+}
+
+/*caixa visual à direita com a imagem */
+.hero1-visual {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  width: 380px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.imagem-hero {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/*restantes dos filtros, barra lateral */
+.filtro-busca-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.titulo-principal {
+  font-size: 24px;
+  color: var(--verde-escuro);
+  margin-bottom: 20px;
+}
+
+.card-meus-grupos {
+  background: #ffffff;
+  border: 1px solid #e0e8dc;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.card-meus-grupos h2 {
+  font-size: 1.2rem;
+  color: var(--verde-escuro, #113f2b);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-meus-grupos .sem-grupos {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+.conteudo-duas-colunas1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 0 40px;
+
+}
+
+.secao-grupos-ativos {
+  flex: 1;
+  margin-left: 0;
+}
+
+
+.coluna-lateral {
+  width: 340px;
+  flex-shrink: 0;
+}
+
+/*aqui já entra o estilo da parte do "corpo" da pagina grupos */
+.grupo-card {
+  background: #ffffff;
+  border: 1px solid #e2e8df;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grupo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.grupo-topo-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* icone quadrado à esquerda */
+.grupo-icone {
+  background-color: #f0f7f2;
+  color: #113f2b;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grupo-icone svg {
+  width: 24px;
+  height: 24px;
+}
+
+/*area central com o selo e o título empilhados */
+.grupo-info-principal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.grupo-selo {
+  background-color: #e6efe8;
+  color: #113f2b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.titulo-aviso1 {
+  font-size: 1.25rem;
+  color: #113f2b;
+  font-weight: 700;
+  margin: 0;
+}
+
+.grupo-membros {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+.grupo-membros svg {
+  width: 16px;
+  height: 16px;
+  color: #666;
+}
+
+.btn-participar {
+  display: inline-block;
+  background-color: #d4ed31;
+  color: #113f2b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-participar:hover {
+  background-color: #c4dc25;
+  transform: translateY(-1px);
+}
+/*organizao das classes de grupos dos campos */
+/*tive que colocar aqui também porque utilizei a mesma classe na pagina principal */
+.grupo-campo{
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.grupo-campo label{
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b5e20;
+  margin-bottom: 6px;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea{
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #c8dfc6;
+  border-radius: 12px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+/*esse aqui garante a altura e o redimensionamento controlado da caixa de texto*/
+.grupo-campo textarea{
+  min-height: 100px;
+  resize: vertical;
+}
+
+/*efeito para um foco verde*/
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus{
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46,125,50,0.15);
+}
+
+.grupo-campo input::placeholder,
+.grupo-campo textarea::placeholder{
+  color: #aaa;
+}
+
+/*aqui fica o subtitulo "ENCONTRE SUA TURMA"*/
+.subtitulo-topo{
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2e7d32;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/*criação do forum*/
+.oculto {
+  display: none !important;
+}
+
+.secao-forum {
+  max-width: 1600px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+/*aqui sera o cabecalho do forum*/
+.forum-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.subtitulo-verde {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--verde, #005a2b);
+  margin-bottom: 4px;
+}
+
+.forum-titulos h2, .card-detalhe h2 {
+  font-size: 1.75rem;
+  color: var(--verde-escuro, #00401f);
+  margin: 0 0 6px 0;
+}
+
+.forum-titulos p {
+  margin: 0;
+  color: #555;
+}
+
+/*botoes */
+.btn-verde {
+  background-color: var(--verde-escuro, #00401f);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-verde:hover {
+  background-color: var(--verde, #005a2b);
+}
+
+.btn-claro {
+  background-color: #eaf3ec;
+  color: var(--verde-escuro, #00401f);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-voltar {
+  margin-bottom: 20px;
+}
+
+/*aqui será os card e a lista do formulario*/
+.lista-topicos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topico-card, .card-formulario, .card-detalhe {
+  background: #ffffff;
+  border: 1px solid #e2e8df;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.topico-card {
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.topico-card:hover {
+  border-color: var(--verde, #005a2b);
+}
+
+.topico-card h3 {
+  color: var(--verde-escuro, #00401f);
+  margin: 0 0 6px 0;
+}
+
+.topico-meta {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.card-formulario {
+  margin-bottom: 24px;
+}
+
+.card-formulario h3, .card-detalhe h3 {
+  color: var(--verde-escuro, #00401f);
+  margin: 0 0 16px 0;
+}
+
+.linha-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.campo-grupo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.campo-grupo input, .campo-grupo textarea {
+  border: 1px solid #d5ddd2;
+  border-radius: 10px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.acoes-form {
+  display: flex;
+  gap: 12px;
+}
+
+.topico-corpo {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.divisor-forum {
+  border: none;
+  border-top: 1px solid #e8ede6;
+  margin: 24px 0;
+}
+
+.lista-respostas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resposta-item {
+  background-color: #f4f8f3;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.resposta-autor {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--verde-escuro, #00401f);
+  margin-bottom: 6px;
+}
+
+.resposta-item p {
+  margin: 0;
+}
+
+/*responsividade para celulares e tablets*/
+@media (max-width: 900px) {
+
+  .conteudo-duas-colunas {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 448px);
+  }
+
+  .container-principal {
+    align-items: center;
+  }
+
+  .card-grupos,
+  .formulario {
+    width: 100%;
+    max-width: 600px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /*cabeçalho*/
+
+  .topo {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 5%;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .marca {
+    justify-content: center;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 14px 18px;
+  }
+
+  .menu a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .menu a svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /*página inicial */
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 32px 5%;
+    gap: 28px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-visual {
+    width: 100%;
+    padding: 24px 20px;
+  }
+
+  .mini-card {
+    width: 90%;
+    padding: 14px;
+  }
+
+  .conteudo-duas-colunas {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 5%;
+    gap: 28px;
+  }
+
+  .layout-conteudo-principal {
+    width: 100%;
+    padding: 0;
+  }
+
+  .secao-avisos {
+    width: 100%;
+  }
+
+  .aviso-card {
+    width: 100%;
+    min-width: 0;
+    padding: 20px 16px;
+  }
+
+  .filtro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filtro-btn {
+    font-size: 14px;
+  }
+
+  /*formulário e grupos */
+
+  .container-principal {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+  }
+
+  .card-grupos,
+  .formulario {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /*página de grupos */
+
+  .hero1 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 5%;
+    gap: 20px;
+  }
+
+  .hero1-texto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero1-texto h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero1-visual {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imagem-hero {
+    width: 100%;
+    max-width: 300px;
+    max-height: 220px;
+  }
+
+  .conteudo-duas-colunas1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5%;
+    gap: 24px;
+  }
+
+  .secao-grupos-ativos {
+    width: 100%;
+  }
+
+  .filtro-busca-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .coluna-lateral {
+    width: 100%;
+  }
+
+  .grupo-topo-card {
+    flex-wrap: wrap;
+  }
+
+  .grupo-info-principal {
+    min-width: 0;
+  }
+
+  .grupo-selo {
+    white-space: normal;
+  }
+
+  /*evita zoom automatico*/
+
+  .grupo-campo input,
+  .grupo-campo select,
+  .grupo-campo textarea {
+    font-size: 16px;
+  }
+
+}
+
+/*celulares pequenos */
+
+@media (max-width: 380px) {
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero1-texto h1 {
+    font-size: 2rem;
+  }
+
+  .menu {
+    gap: 12px;
+  }
+
+  .menu a {
+    font-size: 13px;
+  }
+
+  .titulo-aviso {
+    font-size: 18px;
+  }
+
+}
