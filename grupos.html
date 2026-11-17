@@ -2,9 +2,10 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ComunIF · Campus Bragança Paulista</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/grupo.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="img/ifsp.favicon.png">
 </head>
@@ -44,7 +45,7 @@
       <img src="img/estudo.png" alt="Grupo de estudo" class="imagem-hero">
     </div>
   </section>
-  
+    <br>
   <div class="conteudo-duas-colunas1">
       <section class="secao-grupos-ativos">
         <span class="subtitulo-topo">ENCONTRE SUA TURMA</span>
@@ -65,6 +66,7 @@
             </select>
           </div>
         </div>
+
         <div class="grupo-card">
           <div class="grupo-topo-card">
             <div class="grupo-icone">
@@ -83,20 +85,123 @@
           <p class="descricao-aviso">Projetos, HTML, CSS e JavaScript na prática com colegas do campus.</p>
           <button type="button" class="btn-participar">Participar</button>
         </div>
-    </section>
 
+        <!--para cada card de grupo é necessario fazer uma nova div do pai "grupo-card" e fechar ao final, assim a classe vai servir no css para cada card-->
+
+        <div class="grupo-card">
+          <div class="grupo-topo-card">
+            <div class="grupo-icone">
+              <i data-lucide="cpu"></i>
+            </div>
+            <div class="grupo-info-principal">
+              <span class="grupo-selo">Engenharia de Controle e Automação</span>
+              <h3 class="titulo-aviso1">Controle e Sistemas Embarcados</h3>
+            </div>
+            <div class="grupo-membros">
+              <i data-lucide="users"></i> 12
+            </div>
+          </div>
+          <p class="descricao-aviso">Um espaço para resolver exercícios e trocar ideias sobre lógica e matemática.</p>
+          <button type="button" class="btn-participar">Participar</button>
+        </div>
+
+        <div class="grupo-card">
+          <div class="grupo-topo-card">
+            <div class="grupo-icone">
+              <i data-lucide="pi"></i>
+            </div>
+            <div class="grupo-info-principal">
+              <span class="grupo-selo">Matemática</span>
+              <h3 class="titulo-aviso1">Matematica</h3>
+            </div>
+            <div class="grupo-membros">
+              <i data-lucide="users"></i> 9
+            </div>
+          </div>
+          <p class="descricao-aviso">Sensores, protótipos e desafios de engenharia para aprender construindo.</p>
+          <button type="button" class="btn-participar">Participar</button>
+        </div>
+      </section>
+      <!--aqui vai ficar um card do "meus grupos"-->
       <aside class="coluna-lateral">
         <div class="card-meus-grupos">
-          <h2><i data-lucide="bookmark"></i> Meus Grupos</h2>
+          <h2><i data-lucide="bookmark"></i>Meus Grupos</h2>
           <p class="sem-grupos">Ops! Ainda não entrou em nenhum grupo.</p>
         </div>
       </aside>
   </div>
+    <!--criação do forum-->
+  <section class="secao-forum">
+    <div id="vista-lista">
+      <div class="forum-topo">
+        <div class="forum-titulos">
+          <span class="subtitulo-verde">CONVERSAS DO CAMPUS</span>
+          <h2>Fórum de alunos</h2>
+          <p>Pergunte, responda e compartilhe o que está aprendendo.</p>
+        </div>
+        <button type="button" class="btn-verde" id="btn-abrir-novo">+ Novo tópico</button>
+      </div>
+
+      <form class="card-formulario oculto" id="form-novo-topico">
+        <h3>Comece uma conversa</h3>
+        <div class="linha-inputs">
+          <div class="campo-grupo">
+            <label for="novo-autor">Seu nome</label>
+            <input type="text" id="novo-autor" required>
+          </div>
+          <div class="campo-grupo">
+            <label for="novo-titulo">Título do tópico</label>
+            <input type="text" id="novo-titulo" required>
+          </div>
+        </div>
+        <div class="campo-grupo">
+          <label for="novo-mensagem">Sua mensagem</label>
+          <textarea id="novo-mensagem" rows="4" required></textarea>
+        </div>
+        <div class="acoes-form">
+          <button type="submit" class="btn-verde">Publicar tópico</button>
+          <button type="button" class="btn-claro" id="btn-cancelar-topico">Cancelar</button>
+        </div>
+      </form>
+
+      <div class="lista-topicos" id="lista-topicos"></div>
+    </div>
+
+    <div id="vista-detalhe" class="oculto">
+      <button type="button" class="btn-claro btn-voltar" id="btn-voltar">← Voltar aos tópicos</button>
+
+      <article class="card-detalhe">
+        <h2 id="detalhe-titulo"></h2>
+        <span class="topico-meta" id="detalhe-meta"></span>
+        <p class="topico-corpo" id="detalhe-corpo"></p>
+
+        <hr class="divisor-forum">
+
+        <h3>Respostas</h3>
+        <div class="lista-respostas" id="lista-respostas"></div>
+
+        <hr class="divisor-forum">
+
+        <h3>Escreva uma resposta</h3>
+        <form id="form-nova-resposta">
+          <div class="campo-grupo">
+            <label for="resp-autor">Seu nome</label>
+            <input type="text" id="resp-autor" required>
+          </div>
+          <div class="campo-grupo">
+            <label for="resp-texto">Sua resposta</label>
+            <textarea id="resp-texto" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-verde">Enviar resposta</button>
+        </form>
+      </article>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="footer-bottom">
-    <p>&copy; IFSP Bragança Paulista 2026</p>
+    <p>&copy; IFSP Campus Bragança Paulista 2026</p>
   </div>
 </footer>
 
