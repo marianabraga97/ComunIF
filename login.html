@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComunIF · Campus Bragança Paulista</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/ifsp.favicon.png">
+</head>
+<body class="pagina-login">
+
+  <main class="login-corpo">
+    <!-- LADO ESQUERDO: Formulário -->
+    <section class="painel">
+      <div class="login-conteudo">
+        <span class="login-subtitulo">COMUNIF / ACESSO AO PORTAL</span>
+        <h1 class="login-titulo">Boas-vindas!</h1>
+        <p class="login-descricao">Entre com sua conta e conecte-se à comunidade do campus.</p>
+
+        <form id="form-login" class="login-form">
+          <div class="login-campo">
+            <label for="email">E-mail</label>
+            <div class="input-esquerda">
+              <i data-lucide="mail"></i>
+              <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+          </div>
+
+          <div class="login-campo">
+            <div class="linha">
+              <label for="senha">Senha</label>
+              <a href="#" class="login-acesso" id="esqueci-senha">Esqueci minha senha</a>
+            </div>
+            <div class="input-com-icones">
+              <i data-lucide="lock" class="icone-esquerda"></i>
+              <input type="password" id="senha" placeholder="Digite sua senha" required>
+              <button type="button" class="btn-toggle-senha" id="btn-toggle-senha" aria-label="Mostrar ou ocultar senha">
+                <i data-lucide="eye" id="icone-olho"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="opcoes-login">
+            <label class="checkbox-container" for="manter-conectado">
+              <input type="checkbox" id="manter-conectado">
+              <span>Manter conectado</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-entrar">Entrar</button>
+          <p id="mensagem-feedback" class="mensagem-feedback" role="status"></p>
+        </form>
+
+        <p class="login-suporte">
+          Precisa de ajuda? <a href="#" class="suporte" id="login-suporte">Fale com o suporte</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Curva decorativa no meio -->
+    <div class="login-curva" aria-hidden="true"></div>
+
+    <!-- LADO DIREITO: Painel Verde com Logo (FORA da section.painel!) -->
+    <aside class="login-painel-marca">
+      <img src="img/login.png" alt="ComunIF - Câmpus Bragança Paulista" class="login-logo">
+    </aside>
+  </main>
+
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="js/login.js"></script>
+</body>
+</html>
