@@ -5,157 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ComunIF · Campus Bragança Paulista</title>
   <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/ifsp.favicon.png">
+  <link rel="stylesheet" href="css/login.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/ifsp.favicon.png">
 </head>
-<body>
-<header class="topo">
-  <a class="marca" href="index.html">
-    <img src="img/ifsp.favicon.png" alt="Logo do IFSP" class="logo">
-    <div class="marca-texto">
-      <strong>ComunIF</strong>
-      <span>Campus Bragança Paulista</span>
-    </div>
-  </a>
+<body class="pagina-login">
 
-  <nav class="menu">
-    <a href="index.html" class="ativo"><i data-lucide="house"></i> Início</a>
-    <a href="#avisos"><i data-lucide="megaphone"></i> Avisos</a>
-    <a href="grupos.html"><i data-lucide="users"></i> Grupos de Estudo</a>
-    <a href="calendario.html"><i data-lucide="calendar-days"></i> Calendário</a>
+  <main class="login-corpo">
 
-    <div class="topo-direita">
-      <a href="login.html" class="btn-usuario" aria-label="Entrar"><i data-lucide="circle-user"></i>Login</a>
-    </div>
-  </nav>
-</header>
-<main>
-  <section class="hero">
-      <div class="hero-texto">
-        <span class="selo">Um campus mais conectado</span>
-        <h1>Tudo o que importa no campus, em um só lugar.</h1>
-        <p>Acompanhe avisos, eventos, oportunidades, grupos e calendário acadêmico com mais clareza.</p>
-        <a href="#avisos" class="btn-principal"> Explorar avisos <i data-lucide="arrow-right"></i></a>
+    <section class="painel">
+      <div class="login-conteudo">
+        <span class="login-subtitulo">COMUNIF / ACESSO AO PORTAL</span>
+        <h1 class="login-titulo">Boas-vindas!</h1>
+        <p class="login-descricao">Entre com sua conta e conecte-se à comunidade do campus.</p>
+
+        <form id="form-login" class="login-form">
+          <div class="login-campo">
+            <label for="email">E-mail</label>
+            <div class="input-esquerda">
+              <i data-lucide="mail"></i>
+              <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+          </div>
+
+          <div class="login-campo">
+            <div class="linha">
+              <label for="senha">Senha</label>
+              <a href="#" class="login-acesso" id="esqueci-senha">Esqueci minha senha</a>
+            </div>
+            <div class="input-com-icones">
+              <i data-lucide="lock" class="icone-esquerda"></i>
+              <input type="password" id="senha" placeholder="Digite sua senha" required>
+              <button type="button" class="btn-toggle-senha" id="btn-toggle-senha" aria-label="Mostrar ou ocultar senha">
+                <i data-lucide="eye" id="icone-olho"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="opcoes-login">
+            <label class="checkbox-container" for="manter-conectado">
+              <input type="checkbox" id="manter-conectado">
+              <span>Manter conectado</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-entrar">Entrar</button>
+          <p id="mensagem-feedback" class="mensagem-feedback" role="status"></p>
+        </form>
+
+        <p class="login-suporte">
+          Precisa de ajuda? <a href="#" class="suporte" id="login-suporte">Fale com o suporte</a>
+        </p>
       </div>
-      <div class="hero-visual">
-        <span class="visual-titulo">IFSP • ComunIF</span>
-        <div class="mini-card">
-          <div class="mini-icone"><i data-lucide="megaphone"></i></div>
-          <div class="mini-barras">
-            <span class="barra forte"></span>
-            <span class="barra fraca"></span>
-          </div>
-      </div>
-  <div class="mini-card deslocado">
-    <div class="mini-icone"><i data-lucide="calendar-days"></i></div>
-      <div class="mini-barras">
-        <span class="barra forte"></span>
-        <span class="barra fraca"></span>
-      </div>
-    </div>
-    <span class="visual-rodape">Informação que aproxima ↗</span>
-  </div>
-  </section>
-  <div class="conteudo-duas-colunas">
-    <div class="layout-conteudo-principal">
-      <section class="secao-avisos" id="avisos">
+    </section>
 
-          <p class="subtitulo-topo">FIQUE POR DENTRO</p>
-          <h2 class="titulo-principal1">Avisos importantes</h2>
 
-          <div class="filtro-container">
-            <button class="filtro-btn ativo">Todos</button>
-            <button class="filtro-btn">Avisos Gerais</button>
-            <button class="filtro-btn">Oportunidades</button>
-            <button class="filtro-btn">Eventos</button>
-          </div>
+    <div class="login-curva" aria-hidden="true"></div>
 
-          <div class="aviso-card">
-            <span class="selo2"><i data-lucide="info"></i> AVISOS GERAIS</span>
-            <h3 class="titulo-aviso">INEP e ENADE - Questionário dos Ingressantes</h3>
-            <p class="descricao-aviso">Ingressantes de ADS: não se esqueçam do Questionário do Estudante!
-              O INEP solicita que os alunos ingressantes de 2026 preencham um questionário para conhecer melhor o perfil dos estudantes do ensino superior. O preenchimento é obrigatório e deve ser realizado até <strong>18/12/2026</strong>. É necessário ter uma conta gov.br para acessar.</p>
-            <br>
-          </div>
-          <br>
-          <div class="aviso-card">
-            <span class="selo2"><i data-lucide="info"></i> EVENTOS</span>
+    
+    <aside class="login-painel-marca">
+      <img src="img/login.png" alt="ComunIF - Câmpus Bragança Paulista" class="login-logo">
+    </aside>
+  </main>
 
-            <h3 class="titulo-aviso"> Venha visitar a EXPOADS - Feira de extensão, entre 16/11 a 19/11 no IFSP-BRA</h3>
-
-            <p class="descricao-aviso">Não perca a oportunidade de prestigiar a EXPOADS e conhecer ideias que estão ajudando a construir novas perspectivas para a comunidade.</p>
-
-            <!-- <a href="#" target="_blank" class="btn-aviso">Saiba mais</a> -->
-
-          </div>
-          <br>
-          <div class="aviso-card">
-            <span class="selo2"><i data-lucide="info"></i>OPORTUNIDADES</span>
-
-            <h3 class="titulo-aviso">Vaga de Estágio em Desenvolvimento Web (Presencial)</h3>
-
-            <p class="descricao-aviso">Processo seletivo aberto para estudantes do curso Analise e Desenvolvimento de Sistemas a partir do 3º semestre. Bolsa auxílio + vale-transporte. Inscrições abertas até sexta-feira 27/11.</p>
-
-            <a href="#" target="_blank" class="btn-aviso">Saiba mais</a>
-
-          </div>
-      </section>
-    </div>
-
-    <div class="container-principal">
-      <section class="card-grupos">
-        <h2><i data-lucide="users"></i> Grupos de estudos</h2>
-          <p>Encontre colegas para aprender em conjunto.</p>
-          <a href="grupos.html" class="btn-grupos">Explorar grupos</a>
-      </section>
-
-      <form class="formulario">
-        <p class="subtitulo-topo">SUA VOZ IMPORTA</p>
-          <h2>Ajude a melhorar o ComunIF</h2>
-        <p class="descricao">Conte como tornar a comunicação do campus mais útil para você.</p>
-
-        <div class="grupo-campo">
-            <label for="inNome">Seu nome</label>
-            <input type="text" id="inNome" required placeholder="Como podemos chamar você?">
-        </div>
-
-        <div class="grupo-campo">
-            <label for="inCurso">Curso</label>
-            <input type="text" id="inCurso" required placeholder="Seu curso no campus">
-        </div>
-
-        <div class="grupo-campo">
-            <label for="inOpcoes">Como você avalia essa plataforma?</label>
-            <!--Usei para teste <input type="number" min="0" step="5" id="inPlataforma" required placeholder="Selecione uma nota">-->
-            <select id="inOpcoes" name="opcoes" required>
-              <option value="" disabled selected>Selecione uma nota</option>
-              <option value="1">1 - Precisa melhorar</option>
-              <option value="2">2 - Regular</option>
-              <option value="3">3 - Boa</option>
-              <option value="4">4 - Muito boa</option>
-              <option value="5">5 - Excelente</option>
-            </select>
-        </div>
-        <div class="grupo-campo">
-            <label for="inSugestao">Sua sugestão(opcional)</label>
-            <!--coloquei esse textarea para deixar como uma "caixa de texto" grande porque se colocasse o input type="text" ele seria muito pequeno-->
-            <textarea id="inSugestao" rows="4" placeholder="O que você gostaria de ver aqui?"></textarea>
-        </div>
-        <button type="submit" class="botao-enviar">Enviar avaliação</button>
-      </form>
-    </div>
-  </div>
- </main>
-
-<footer>
-  <div class="footer-bottom">
-  <p>&copy; IFSP Campus Bragança Paulista 2026</p>
-  </div>
-</footer>
-
-<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
-<script src="js/main.js"></script>
-
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="js/login.js"></script>
 </body>
 </html>
