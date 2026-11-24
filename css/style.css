@@ -95,9 +95,14 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
+/*icone esquerdo tanto no e-mail quanto na senha*/
 .input-esquerda i,
+.input-esquerda svg,
+.input-com-icones > i,
+.input-com-icones > svg,
 .icone-esquerda {
   position: absolute;
   left: 14px;
@@ -152,7 +157,8 @@
   color: var(--verde-escuro, #00401f);
 }
 
-.btn-toggle-senha i {
+.btn-toggle-senha i,
+.btn-toggle-senha svg {
   width: 18px;
   height: 18px;
 }
@@ -207,7 +213,8 @@
   transform: scale(0.99);
 }
 
-.btn-entrar i {
+.btn-entrar i,
+.btn-entrar svg {
   width: 18px;
   height: 18px;
 }
